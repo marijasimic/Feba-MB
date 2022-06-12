@@ -1,0 +1,148 @@
+:root {
+  --color-text: #e7dfdd;
+  --color-highlight: #e2781b;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: var(--color-text);
+  line-height: 1.9;
+  background-color: #0e0b16;
+}
+
+/* GALLERY */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.gallery img {
+  width: 400px;
+  height: 300px;
+  cursor: pointer;
+  margin: 20px;
+  border: 2px solid var(--color-highlight);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.gallery img:hover {
+  border: 3px solid rgb(244, 105, 54);
+}
+
+/* FULL IMAGE */
+.full-image-box {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.full-image-box img {
+  width: 90%;
+  max-width: 500px;
+}
+
+.close-image {
+  position: absolute;
+  top: 5%;
+  right: 3%;
+  font-size: 3rem;
+}
+.close-image i {
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+/* BACK BUTTON */
+
+.back {
+  font-size: 1.5rem;
+  font-variant: small-caps;
+  cursor: pointer;
+  padding: 5px;
+  background-color: transparent;
+  color: var(--color-text);
+  border-color: var(--color-highlight);
+  margin: 50px 0px 20px 60px;
+}
+.back:hover {
+  background-color: #120f1b;
+}
+
+@media (max-width: 1024px) {
+  .close-image {
+    top: 1%;
+    right: 5%;
+  }
+  #left-arrow {
+    left: 20%;
+  }
+  #right-arrow {
+    right: 20%;
+  }
+}
+@media (max-width: 768px) {
+  html,
+  body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  .gallery img {
+    width: 450px;
+    height: 350px;
+  }
+  .close-image {
+    right: 5%;
+  }
+  #left-arrow {
+    left: 12%;
+  }
+  #right-arrow {
+    right: 12%;
+  }
+}
+@media (max-width: 480px){
+  .back{
+    margin: 20px 0 20px 40px;
+  }
+  .gallery img{
+    width: 350px;
+    height: 300px;
+  }
+  .full-image-box img{
+    width: 85%;
+  }
+  #left-arrow{
+    left: 1%;
+  }
+  #right-arrow{
+    right: 1%;
+  }
+}
+@media(max-width:320px){
+  .gallery img{
+    width: 300px;
+    height: 280px;
+  }
+  .back{
+    margin-left:20px;
+  }
+  #left-arrow, #right-arrow{
+    font-size: 2rem;
+  }
+}
